@@ -27,7 +27,7 @@ def scrape_all():
     browser.quit()
     return data
 
-#SCRAPE MARS NEWS 
+#Scrape Mars News 
 def mars_news(browser):
     # Visit the mars nasa news site
     url = 'https://redplanetscience.com'
@@ -52,7 +52,7 @@ def mars_news(browser):
     
     return news_title, news_p
     
-# ### JPL SPACE IMAGES FEATURED IMAGE
+# ###Space Images
 def featured_image(browser):
     # Visit URL
     url = 'https://spaceimages-mars.com'
@@ -79,7 +79,7 @@ def featured_image(browser):
     
     return img_url
     
-#MARS FACTS
+#Mars Facts
 def mars_facts():
     # Add try/except for error handling
     try:
@@ -96,7 +96,7 @@ def mars_facts():
     # Convert dataframe into HTML format, add bootstrap
     return df.to_html(classes="table table-striped")
 
-#HEMISPHERE DATA
+#Hemisphere Data
 def hemispheres(browser):
     df = pd.read_html('https://galaxyfacts-mars.com')[0]
     df.head()
